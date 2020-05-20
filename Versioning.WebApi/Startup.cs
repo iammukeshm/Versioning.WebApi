@@ -36,7 +36,7 @@ namespace Versioning.WebApi
                 config.AssumeDefaultVersionWhenUnspecified = true;
                 // Advertise the API versions supported for the particular endpoint
                 config.ReportApiVersions = true;
-                //HTTP Header based versioning
+                //HTTP Header based versioning - combine
                 config.ApiVersionReader = ApiVersionReader.Combine(new HeaderApiVersionReader("x-api-version"), new QueryStringApiVersionReader("api-version"));
             });
             #endregion
